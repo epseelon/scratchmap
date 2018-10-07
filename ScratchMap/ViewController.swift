@@ -9,7 +9,8 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    @IBOutlet weak var mapImageView: NSImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +23,19 @@ class ViewController: NSViewController {
         }
     }
 
-
+    @IBAction func setAsDesktopWallpaperButtonClicked(_ sender: Any) {
+        if let documentsDirectoryUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let mapFile = documentsDirectoryUrl.appendingPathComponent("scratchmap.png")
+            let mapData = self.mapImageView.data()
+            do {
+                try mapData.write(to: mapFile)
+                print(mapFile.path)
+                try Wallpaper.set(mapFile, screen: .main, scale: .fit)
+            } catch(let error) {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
 }
 
