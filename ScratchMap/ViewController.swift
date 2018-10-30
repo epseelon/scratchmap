@@ -38,7 +38,9 @@ class ViewController: NSViewController {
             let mapFile = documentsDirectoryUrl.appendingPathComponent("scratchmap.png")
             
             //let screenSize = NSScreen.main!.frame.size
-            let mapData = self.countriesView!.imageData(withSize: NSScreen.main!.frame.size)
+            let screenSize = NSScreen.main!.frame.size
+            print("Generating wallpaper with size \(screenSize.width)x\(screenSize.height)")
+            let mapData = self.countriesView!.imageData(withSize: screenSize)
             do {
                 try mapData.write(to: mapFile)
                 print(mapFile.path)

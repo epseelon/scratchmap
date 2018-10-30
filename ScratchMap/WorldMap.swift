@@ -39,6 +39,7 @@ class WorldMap: NSView {
         self.wantsLayer = true
         
         backgroundLayer.contentsGravity = .resizeAspect
+        backgroundLayer.backgroundColor = .black
         backgroundLayer.contents = NSImage(named: "world")!.tint(color: .white)
         backgroundLayer.frame = self.layer!.frame
         self.layer!.addSublayer(backgroundLayer)
