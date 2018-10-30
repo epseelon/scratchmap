@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6EA8116402AC0F1785474C71 /* Pods_ScratchMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAFD31AE67631A6C251758E /* Pods_ScratchMap.framework */; };
+		B903CE82216D4B1200F5AAF2 /* WorldMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B903CE81216D4B1200F5AAF2 /* WorldMap.swift */; };
 		B9641259216A04870056D0B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9641258216A04870056D0B6 /* AppDelegate.swift */; };
 		B964125B216A04870056D0B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B964125A216A04870056D0B6 /* ViewController.swift */; };
 		B964125D216A04880056D0B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B964125C216A04880056D0B6 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		54432AC92C8415AFA35DC5CF /* Pods-ScratchMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScratchMapTests/Pods-ScratchMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7EAFD31AE67631A6C251758E /* Pods_ScratchMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScratchMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9428C7BE32B50936D7D7A3E3 /* Pods_ScratchMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScratchMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B903CE81216D4B1200F5AAF2 /* WorldMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldMap.swift; sourceTree = "<group>"; };
 		B9641255216A04870056D0B6 /* ScratchMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScratchMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9641258216A04870056D0B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B964125A216A04870056D0B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				B9641261216A04880056D0B6 /* Info.plist */,
 				B9641262216A04880056D0B6 /* ScratchMap.entitlements */,
 				B99D85B8216A0A40000523A8 /* ImageUtils.swift */,
+				B903CE81216D4B1200F5AAF2 /* WorldMap.swift */,
 			);
 			path = ScratchMap;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B964125B216A04870056D0B6 /* ViewController.swift in Sources */,
+				B903CE82216D4B1200F5AAF2 /* WorldMap.swift in Sources */,
 				B9641259216A04870056D0B6 /* AppDelegate.swift in Sources */,
 				B99D85BC216A331B000523A8 /* Wallpaper.swift in Sources */,
 				B99D85BD216A331B000523A8 /* util.swift in Sources */,

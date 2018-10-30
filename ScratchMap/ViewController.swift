@@ -9,12 +9,22 @@
 import Cocoa
 
 class ViewController: NSViewController {
-    @IBOutlet weak var mapImageView: NSImageView!
+    @IBOutlet weak var countriesView: WorldMap!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        countriesView.scratch(country: "AD")
+        countriesView.scratch(country: "AE")
+        countriesView.scratch(country: "AF")
+        countriesView.scratch(country: "AG")
+        countriesView.scratch(country: "AL")
+        countriesView.scratch(country: "AO")
+        countriesView.scratch(country: "AR")
+        countriesView.scratch(country: "AT")
+        countriesView.scratch(country: "AU")
+        countriesView.scratch(country: "AZ")
+        countriesView.scratch(country: "US")
     }
 
     override var representedObject: Any? {
@@ -26,7 +36,9 @@ class ViewController: NSViewController {
     @IBAction func setAsDesktopWallpaperButtonClicked(_ sender: Any) {
         if let documentsDirectoryUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             let mapFile = documentsDirectoryUrl.appendingPathComponent("scratchmap.png")
-            let mapData = self.mapImageView.data()
+            
+            //let screenSize = NSScreen.main!.frame.size
+            let mapData = self.countriesView!.imageData(withSize: NSScreen.main!.frame.size)
             do {
                 try mapData.write(to: mapFile)
                 print(mapFile.path)

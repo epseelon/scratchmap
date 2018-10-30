@@ -84,4 +84,42 @@ extension CALayer {
         return imageRepresentation.representation(using: fileType, properties: properties)!
     }
     
+    func data(using fileType: NSBitmapImageRep.FileType = .png, size: CGSize,
+              properties: [NSBitmapImageRep.PropertyKey : Any] = [:]) -> Data {
+        let width = bounds.width * self.contentsScale
+        let height = bounds.height * self.contentsScale
+        let imageRepresentation = NSBitmapImageRep(bitmapDataPlanes: nil,
+                                                   pixelsWide: Int(size.width), pixelsHigh: Int(size.height),
+                                                   bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true,
+                                                   isPlanar: false, colorSpaceName: NSColorSpaceName.deviceRGB,
+                                                   bytesPerRow: 0, bitsPerPixel: 0)!
+        imageRepresentation.size = size
+        
+        let context = NSGraphicsContext(bitmapImageRep: imageRepresentation)!
+        
+        context.cgContext.scaleBy(x: size.width / width, y: size.height / height)
+        render(in: context.cgContext)
+        
+        return imageRepresentation.representation(using: fileType,
+                                                  properties: properties)!
+    }
+}
+
+extension NSImage {
+    func tint(color: NSColor) -> NSImage {
+        guard !self.isTemplate else { return self }
+        
+        let image = self.copy() as! NSImage
+        image.lockFocus()
+        
+        color.set()
+        
+        let imageRect = NSRect(origin: NSZeroPoint, size: image.size)
+        imageRect.fill(using: .sourceAtop)
+        
+        image.unlockFocus()
+        image.isTemplate = false
+        
+        return image
+    }
 }

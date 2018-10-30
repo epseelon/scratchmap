@@ -709,10 +709,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1248" height="651"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u1y-QR-07W">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="THv-Nb-Hu9" customClass="WorldMap" customModule="ScratchMap" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="1248" height="651"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="world" id="vcE-wL-1lI"/>
-                            </imageView>
+                            </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ewC-Ul-4Ji">
                                 <rect key="frame" x="20" y="19" width="167" height="23"/>
                                 <buttonCell key="cell" type="roundTextured" title="Set as desktop wallpaper" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Wcu-kz-bin">
@@ -726,16 +725,16 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="ewC-Ul-4Ji" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="5Y0-il-oVS"/>
-                            <constraint firstAttribute="trailing" secondItem="u1y-QR-07W" secondAttribute="trailing" id="Efv-Nu-RVS"/>
-                            <constraint firstItem="u1y-QR-07W" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="IOg-al-EeP"/>
-                            <constraint firstItem="u1y-QR-07W" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="OUh-46-ONg"/>
+                            <constraint firstAttribute="bottom" secondItem="THv-Nb-Hu9" secondAttribute="bottom" id="8Tv-ui-pqU"/>
+                            <constraint firstItem="THv-Nb-Hu9" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="YNy-qC-nDn"/>
+                            <constraint firstAttribute="trailing" secondItem="THv-Nb-Hu9" secondAttribute="trailing" id="fxD-V3-yNc"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ewC-Ul-4Ji" secondAttribute="trailing" constant="20" id="i0Y-qc-HTp"/>
                             <constraint firstAttribute="bottom" secondItem="ewC-Ul-4Ji" secondAttribute="bottom" constant="20" id="mrU-LE-iyS"/>
-                            <constraint firstAttribute="bottom" secondItem="u1y-QR-07W" secondAttribute="bottom" id="vDl-Dc-V5I"/>
+                            <constraint firstItem="THv-Nb-Hu9" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="nXe-Yp-cVo"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapImageView" destination="u1y-QR-07W" id="mjJ-No-25E"/>
+                        <outlet property="countriesView" destination="THv-Nb-Hu9" id="98e-xK-QDC"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -743,7 +742,4 @@
             <point key="canvasLocation" x="75" y="1134"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="world" width="1248" height="651"/>
-    </resources>
 </document>
