@@ -86,8 +86,8 @@ extension CALayer {
     
     func data(using fileType: NSBitmapImageRep.FileType = .png, size: CGSize,
               properties: [NSBitmapImageRep.PropertyKey : Any] = [:]) -> Data {
-        let width = bounds.width * self.contentsScale
-        let height = bounds.height * self.contentsScale
+        let width = bounds.width
+        let height = bounds.height
         let imageRepresentation = NSBitmapImageRep(bitmapDataPlanes: nil,
                                                    pixelsWide: Int(size.width), pixelsHigh: Int(size.height),
                                                    bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true,

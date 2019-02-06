@@ -16,8 +16,8 @@
 		B964126C216A04890056D0B6 /* ScratchMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B964126B216A04890056D0B6 /* ScratchMapTests.swift */; };
 		B9641277216A04890056D0B6 /* ScratchMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9641276216A04890056D0B6 /* ScratchMapUITests.swift */; };
 		B99D85B9216A0A40000523A8 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D85B8216A0A40000523A8 /* ImageUtils.swift */; };
-		B99D85BC216A331B000523A8 /* Wallpaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D85BA216A331A000523A8 /* Wallpaper.swift */; };
 		B99D85BD216A331B000523A8 /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D85BB216A331A000523A8 /* util.swift */; };
+		B9D3665B21EDF47200C42C8F /* Wallpaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D3665A21EDF47200C42C8F /* Wallpaper.swift */; };
 		C7E1460B69D6103DEB066D99 /* Pods_ScratchMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA21BEEB0A7C622F34EE17F /* Pods_ScratchMapTests.framework */; };
 		F54CD4FD6684EED1AFBD739F /* Pods_ScratchMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9428C7BE32B50936D7D7A3E3 /* Pods_ScratchMapUITests.framework */; };
 /* End PBXBuildFile section */
@@ -60,9 +60,10 @@
 		B9641276216A04890056D0B6 /* ScratchMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchMapUITests.swift; sourceTree = "<group>"; };
 		B9641278216A04890056D0B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B99D85B8216A0A40000523A8 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
-		B99D85BA216A331A000523A8 /* Wallpaper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallpaper.swift; sourceTree = "<group>"; };
 		B99D85BB216A331A000523A8 /* util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
 		B99D85BF216A335B000523A8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		B9D3665821EDF39E00C42C8F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		B9D3665A21EDF47200C42C8F /* Wallpaper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallpaper.swift; sourceTree = "<group>"; };
 		BD1396F22ABF934A5D19CADB /* Pods-ScratchMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchMapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScratchMapUITests/Pods-ScratchMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BEA21BEEB0A7C622F34EE17F /* Pods_ScratchMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScratchMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D75D12B1D0CB4B2A0159B3 /* Pods-ScratchMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScratchMapTests/Pods-ScratchMapTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				B99D85BB216A331A000523A8 /* util.swift */,
-				B99D85BA216A331A000523A8 /* Wallpaper.swift */,
+				B9D3665A21EDF47200C42C8F /* Wallpaper.swift */,
 				B9641258216A04870056D0B6 /* AppDelegate.swift */,
 				B964125A216A04870056D0B6 /* ViewController.swift */,
 				B964125C216A04880056D0B6 /* Assets.xcassets */,
@@ -157,6 +158,7 @@
 		B99D85BE216A335B000523A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9D3665821EDF39E00C42C8F /* libsqlite3.0.tbd */,
 				B99D85BF216A335B000523A8 /* libsqlite3.tbd */,
 				7EAFD31AE67631A6C251758E /* Pods_ScratchMap.framework */,
 				BEA21BEEB0A7C622F34EE17F /* Pods_ScratchMapTests.framework */,
@@ -406,8 +408,8 @@
 				B964125B216A04870056D0B6 /* ViewController.swift in Sources */,
 				B903CE82216D4B1200F5AAF2 /* WorldMap.swift in Sources */,
 				B9641259216A04870056D0B6 /* AppDelegate.swift in Sources */,
-				B99D85BC216A331B000523A8 /* Wallpaper.swift in Sources */,
 				B99D85BD216A331B000523A8 /* util.swift in Sources */,
+				B9D3665B21EDF47200C42C8F /* Wallpaper.swift in Sources */,
 				B99D85B9216A0A40000523A8 /* ImageUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

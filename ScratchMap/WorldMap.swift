@@ -42,6 +42,7 @@ class WorldMap: NSView {
         backgroundLayer.backgroundColor = .black
         backgroundLayer.contents = NSImage(named: "world")!.tint(color: .white)
         backgroundLayer.frame = self.layer!.frame
+        backgroundLayer.delegate = self
         self.layer!.addSublayer(backgroundLayer)
     }
     
@@ -50,7 +51,14 @@ class WorldMap: NSView {
         countryLayer.contentsGravity = .resizeAspect
         countryLayer.contents = NSImage(named: country)
         countryLayer.frame = self.layer!.frame
+        countryLayer.delegate = self
         self.countryLayers[country] = countryLayer
         self.layer!.addSublayer(countryLayer)
+    }
+}
+
+extension WorldMap: CALayerDelegate {
+    func action(for layer: CALayer, forKey event: String) -> CAAction? {
+        return NSNull()
     }
 }
