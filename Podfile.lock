@@ -1,18 +1,22 @@
 PODS:
+  - Mapbox-macOS-SDK (0.13.0)
   - SQLite.swift (0.11.5):
     - SQLite.swift/standard (= 0.11.5)
   - SQLite.swift/standard (0.11.5)
 
 DEPENDENCIES:
+  - Mapbox-macOS-SDK (~> 0.13.0)
   - SQLite.swift (~> 0.11.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Mapbox-macOS-SDK
     - SQLite.swift
 
 SPEC CHECKSUMS:
+  Mapbox-macOS-SDK: 52f67e130391b91249cba2d2f6464fac103e5399
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
 
-PODFILE CHECKSUM: 8cf5b61f9adc4697157ce18bd566e65c88696e58
+PODFILE CHECKSUM: 93088ce0177af0418c1d8db876ead46cb3d014c5
 
 COCOAPODS: 1.5.3

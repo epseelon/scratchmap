@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -619,7 +619,7 @@
                                         <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
-                                                <action selector="toggleSourceList:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
+                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
@@ -660,6 +660,12 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
+                                        <menuItem title="Improve This Map" id="qg7-DL-M8o">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="giveFeedback:" target="Ady-hI-5gd" id="NL0-aG-GNg"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="ScratchMap Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
@@ -685,7 +691,7 @@
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <rect key="contentRect" x="384" y="275" width="960" height="540"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="580" height="270"/>
@@ -709,9 +715,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1248" height="651"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="THv-Nb-Hu9" customClass="WorldMap" customModule="ScratchMap" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="1248" height="651"/>
-                            </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ewC-Ul-4Ji">
                                 <rect key="frame" x="20" y="19" width="167" height="23"/>
                                 <buttonCell key="cell" type="roundTextured" title="Set as desktop wallpaper" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Wcu-kz-bin">
@@ -722,24 +725,27 @@
                                     <action selector="setAsDesktopWallpaperButtonClicked:" target="XfG-lQ-9wD" id="TnV-Vj-9Gv"/>
                                 </connections>
                             </button>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="NPD-Pp-WfH" customClass="MGLMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="1248" height="651"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/epseelon/cju8mbidc43h31gnqjr6hi3y5"/>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ewC-Ul-4Ji" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="5Y0-il-oVS"/>
-                            <constraint firstAttribute="bottom" secondItem="THv-Nb-Hu9" secondAttribute="bottom" id="8Tv-ui-pqU"/>
-                            <constraint firstItem="THv-Nb-Hu9" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="YNy-qC-nDn"/>
-                            <constraint firstAttribute="trailing" secondItem="THv-Nb-Hu9" secondAttribute="trailing" id="fxD-V3-yNc"/>
+                            <constraint firstItem="NPD-Pp-WfH" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="A68-86-k2w"/>
+                            <constraint firstItem="NPD-Pp-WfH" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="BYv-zd-eT8"/>
+                            <constraint firstAttribute="trailing" secondItem="NPD-Pp-WfH" secondAttribute="trailing" id="N9o-VQ-Hwh"/>
+                            <constraint firstAttribute="bottom" secondItem="NPD-Pp-WfH" secondAttribute="bottom" id="SH0-gP-vtO"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ewC-Ul-4Ji" secondAttribute="trailing" constant="20" id="i0Y-qc-HTp"/>
                             <constraint firstAttribute="bottom" secondItem="ewC-Ul-4Ji" secondAttribute="bottom" constant="20" id="mrU-LE-iyS"/>
-                            <constraint firstItem="THv-Nb-Hu9" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="nXe-Yp-cVo"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="countriesView" destination="THv-Nb-Hu9" id="98e-xK-QDC"/>
-                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="1134"/>
+            <point key="canvasLocation" x="75" y="1133.5"/>
         </scene>
     </scenes>
 </document>

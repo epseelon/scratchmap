@@ -20,8 +20,12 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoiZXBzZWVsb24iLCJhIjoiY2pxbDM3aXNqMDR5dzQzcDV3cjB4MHRjOSJ9.R2OvUGq6bXXKmykwh5ZqvQ</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2018 Epseelon sprl. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>

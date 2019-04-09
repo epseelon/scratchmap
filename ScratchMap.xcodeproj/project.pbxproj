@@ -252,13 +252,21 @@
 				TargetAttributes = {
 					B9641254216A04870056D0B6 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					B9641266216A04890056D0B6 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = B9641254216A04870056D0B6;
 					};
 					B9641271216A04890056D0B6 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = B9641254216A04870056D0B6;
 					};
 				};
@@ -341,12 +349,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ScratchMap/Pods-ScratchMap-frameworks.sh",
+				"${PODS_ROOT}/Mapbox-macOS-SDK/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-macOS-SDK/Mapbox.framework.dSYM",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,7 +602,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.epseelon.ScratchMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -612,7 +624,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.epseelon.ScratchMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -622,6 +634,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = HLAKBN9F84;
@@ -633,7 +646,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.epseelon.ScratchMapTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScratchMap.app/Contents/MacOS/ScratchMap";
 			};
 			name = Debug;
@@ -644,6 +658,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = HLAKBN9F84;
@@ -655,7 +670,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.epseelon.ScratchMapTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScratchMap.app/Contents/MacOS/ScratchMap";
 			};
 			name = Release;
@@ -665,6 +681,7 @@
 			baseConfigurationReference = BD1396F22ABF934A5D19CADB /* Pods-ScratchMapUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = HLAKBN9F84;
@@ -676,7 +693,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.epseelon.ScratchMapUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = ScratchMap;
 			};
 			name = Debug;
@@ -686,6 +704,7 @@
 			baseConfigurationReference = F07B7DB927BD60518FDF809E /* Pods-ScratchMapUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = HLAKBN9F84;
@@ -697,7 +716,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.epseelon.ScratchMapUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = ScratchMap;
 			};
 			name = Release;

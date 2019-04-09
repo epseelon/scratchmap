@@ -9,22 +9,11 @@
 import Cocoa
 
 class ViewController: NSViewController {
-    @IBOutlet weak var countriesView: WorldMap!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        countriesView.scratch(country: "AD")
-        countriesView.scratch(country: "AE")
-        countriesView.scratch(country: "AF")
-        countriesView.scratch(country: "AG")
-        countriesView.scratch(country: "AL")
-        countriesView.scratch(country: "AO")
-        countriesView.scratch(country: "AR")
-        countriesView.scratch(country: "AT")
-        countriesView.scratch(country: "AU")
-        countriesView.scratch(country: "AZ")
-        countriesView.scratch(country: "US")
+        
     }
 
     override var representedObject: Any? {
@@ -34,7 +23,7 @@ class ViewController: NSViewController {
     }
 
     @IBAction func setAsDesktopWallpaperButtonClicked(_ sender: Any) {
-        if let documentsDirectoryUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+        /*if let documentsDirectoryUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             let mapFile = documentsDirectoryUrl.appendingPathComponent("scratchmap.png")
             
             //let screenSize = NSScreen.main!.frame.size
@@ -48,7 +37,7 @@ class ViewController: NSViewController {
             } catch(let error) {
                 print(error.localizedDescription)
             }
-        }
+        }*/
     }
     
 }

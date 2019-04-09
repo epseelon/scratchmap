@@ -7,6 +7,7 @@ target 'ScratchMap' do
 
   # Pods for ScratchMap
   pod 'SQLite.swift', '~> 0.11.5'
+  pod 'Mapbox-macOS-SDK', '~> 0.13.0'
 
   target 'ScratchMapTests' do
     inherit! :search_paths
